@@ -20,17 +20,23 @@ export default function Document() {
         <meta property="og:title" content="Fraqvest" />
         <meta property="og:site_name" content="Fraqvest" />
         <meta property="og:url" content="https://fraqvest.com" />
-        <meta property="og:description" content="Inclusive Real Estate Investing For All" />
+        <meta
+          property="og:description"
+          content="Fraqvest empowers you to invest in global rental properties within minutes. Enjoy monthly rent payments and discover the simplest way to diversify your real estate investments"
+        />
         <meta property="og:type" content="website" />
         <meta property="og:rich_attachment" content="true" />
-        <meta property="og:image" content="/assets/logo_light.svg" />
+        <meta property="og:image" content="https://fraqvest.com/assets/logo_light.svg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Fraqvest" />
         <meta name="twitter:creator" content="Fraqvest" />
         <meta name="twitter:site" content="@fraqvest" />
-        <meta name="twitter:image" content="/assets/logo_light.svg" />
+        <meta name="twitter:image" content="https://fraqvest.com/assets/logo_light.svg" />
         <meta name="twitter:image:alt" content="Fraqvest" />
-        <meta name="twitter:description" content="Inclusive Real Estate Investing For All" />
+        <meta
+          name="twitter:description"
+          content="Fraqvest empowers you to invest in global rental properties within minutes. Enjoy monthly rent payments and discover the simplest way to diversify your real estate investments"
+        />
 
         {/* Google tag (gtag.js) */}
         <Script

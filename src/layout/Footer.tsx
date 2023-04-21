@@ -81,6 +81,14 @@ export default function Footer() {
               <i className="ri-medium-fill" />
             </Link>
           </li>
+          <li>
+            <Link
+              href="mailto:team@fraqvest.com"
+              className="text-[28px] text-fv-200 hover:text-opacity-75"
+            >
+              <i className="ri-mail-fill" />
+            </Link>
+          </li>
         </ul>
 
         <span className="flex items-center gap-1 font-rube text-[16px]/[16px] font-normal text-[#C5C8BA]">
