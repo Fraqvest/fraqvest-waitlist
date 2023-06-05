@@ -2,6 +2,7 @@ import { useModalContext } from '@/contex/modalContext';
 import { Button } from '@/ui/Button';
 import { TextField } from '@/ui/Input/TextField';
 import { emailExists, validateEmail } from '@/util/verificiation';
+import { useRouter } from 'next/router';
 import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 
@@ -12,6 +13,7 @@ const initialData = {
 
 const JoinWaitlistForm = () => {
   const modalHook = useModalContext();
+  const router = useRouter();
   const [form, setForm] = useState(initialData);
   const [loading, setLoading] = useState<boolean>(false);
   const [err, setError] = useState<string>('');
@@ -55,6 +57,7 @@ const JoinWaitlistForm = () => {
         setForm(initialData);
         toast.success('Successfully added to waitlist');
         modalHook?.closeModal();
+        router.push('/thanks');
       })
       .catch(() => {
         setLoading(false);
