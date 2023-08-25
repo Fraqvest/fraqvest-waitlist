@@ -89,7 +89,7 @@ const JoinWaitlistForm = () => {
             required
           />
           <TextField
-            value={form.email}
+            value={form.email.trim()}
             type="email"
             name="email"
             err={err}
