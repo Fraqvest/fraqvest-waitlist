@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Home() {
@@ -20,22 +21,24 @@ export default function Home() {
       <main className="fixed inset-0 z-30 flex h-screen w-full items-center justify-center bg-fv-500 backdrop-blur-[37px] backdrop-filter">
         <div className="relative h-[490px] w-full rounded-sm border border-fv-200 md:max-w-[526px]">
           <div className="w-full items-center justify-center p-8 text-center">
-            <div className="flex w-full justify-center">
+            <div className="flex w-full items-center justify-center">
               <i className="ri-checkbox-circle-fill  text-[105px] text-fv-200" />
             </div>
             <h1 className=" pt-4 text-center font-rube text-[25px] font-normal leading-[38px] text-white lg:text-[36px] lg:leading-[44px]">
               Thank you for your interest in Fraqvest
             </h1>
-            <p className="py-4 text-center font-rube text-[13px] font-[400] leading-[19px] text-[#828282]">
-              We’re Glad To Have You!
+            <p className="py-5 text-center  font-rube text-[13px] font-[400] leading-[19px] text-[#828282]">
+              Join our commnuity to stay updated on recent developments and information
             </p>
 
-            <Link
-              href="/"
-              className="mt-6 flex w-full items-center justify-center gap-2.5 bg-fv-200 px-12 py-4 text-center font-rube text-[1rem]/[1.4rem] font-normal text-fv-500 hover:bg-opacity-90"
-            >
-              Continue Exploring
+           <div className='flex items-center justify-center'>
+            <Link href={'/'} className='mr-4'>
+            <Image src={'/assets/whatsapp.png'} width={33} height={33} alt='whatsapp_img' />
             </Link>
+            <Link href={'/'} >
+            <Image src={'/assets/telegram.png'} width={33} height={33} alt='whatsapp_img' />
+            </Link>
+           </div>
           </div>
         </div>
       </main>
