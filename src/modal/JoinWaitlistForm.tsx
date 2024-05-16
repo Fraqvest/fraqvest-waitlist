@@ -8,7 +8,8 @@ import { toast } from 'react-toastify';
 
 const initialData = {
   email: '',
-  fullname: ''
+  fullname: '',
+  ref_code: ''
 };
 
 const JoinWaitlistForm = () => {
@@ -33,9 +34,9 @@ const JoinWaitlistForm = () => {
     e.preventDefault();
     if (err && err.length > 0) return;
     setLoading(true);
-    const info = await emailExists(form.email, process.env.NEXT_PUBLIC_SHEET_URL as string).catch(() => {
+    const info = await emailExists(form.email, process.env.NEXT_PUBLIC_SHEET_URL as string).catch((err) => {
       setLoading(false);
-      toast.error('something went wrong!!');
+     return  toast.error('something went wrong!!');
     });
     if (info) {
       toast.error(info);
@@ -98,6 +99,14 @@ const JoinWaitlistForm = () => {
             onChange={onChange}
             autoComplete="off"
             required
+          />
+          <TextField
+            value={form.ref_code}
+            name="ref_code"
+            label="Referral Code / Username"
+            placeholder="Enter code or username"
+            autoComplete="off"
+            onChange={onChange}
           />
           <Button fullwidth={true} variant="filled" extraClass="w-full text-white text-center mt-6">
             {' '}
