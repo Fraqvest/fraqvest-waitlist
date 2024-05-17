@@ -32,10 +32,10 @@ export default function Home() {
             </p>
 
            <div className='flex items-center justify-center'>
-            <Link href={'/'} className='mr-4'>
+            <Link href={'https://t.me/Fraqvestors'} className='mr-4'>
             <Image src={'/assets/whatsapp.png'} width={33} height={33} alt='whatsapp_img' />
             </Link>
-            <Link href={'/'} >
+            <Link href={'https://whatsapp.com/channel/0029VaaGhNj0lwgzL8AKlT0e'} >
             <Image src={'/assets/telegram.png'} width={33} height={33} alt='whatsapp_img' />
             </Link>
            </div>
