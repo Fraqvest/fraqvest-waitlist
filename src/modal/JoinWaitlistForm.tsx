@@ -1,7 +1,7 @@
 import { useModalContext } from '@/contex/modalContext';
 import { Button } from '@/ui/Button';
 import { TextField } from '@/ui/Input/TextField';
-import { emailExists, validateEmail } from '@/util/verificiation';
+import { emailExists, refrenceExists, validateEmail } from '@/util/verificiation';
 import { useRouter } from 'next/router';
 import React, { useState } from 'react';
 import { toast } from 'react-toastify';
@@ -43,6 +43,23 @@ const JoinWaitlistForm = () => {
       setLoading(false);
       return;
     }
+
+    if(form.ref_code) {
+      const isRef = 
+      await refrenceExists(form.ref_code, 'https://sheetdb.io/api/v1/pj9ugehixp4pj')
+      .catch(err => {
+        setLoading(false);
+       return  toast.error('something went wrong!!');
+      });
+      if(!isRef) {
+        toast.error('Refrence does not exists');
+        setLoading(false)
+        return 
+      }
+      setLoading(false)
+
+    }
+
     fetch(process.env.NEXT_PUBLIC_SHEET_URL as string, {
       method: 'POST',
       headers: {
@@ -66,7 +83,7 @@ const JoinWaitlistForm = () => {
       });
   };
   return (
-    <div className="relative flex w-full flex-col items-center justify-center p-8">
+    <div className="relative flex w-full flex-col items-center justify-center p-6">
       <div className="flex w-full justify-end">
         <i className="ri-close-line cursor-pointer text-[27px] font-[500] text-white" onClick={modalHook?.closeModal} />
       </div>
