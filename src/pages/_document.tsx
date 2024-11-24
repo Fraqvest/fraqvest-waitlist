@@ -38,21 +38,16 @@ export default function Document() {
           content="Fraqvest empowers you to invest in global rental properties within minutes. Enjoy monthly rent payments and discover the simplest way to diversify your real estate investments"
         />
 
-        {/* Google tag (gtag.js) */}
-        <Script
-          strategy="lazyOnload"
-          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
-        />
-        <Script id="ga-script" strategy="lazyOnload">
+        {/* Replace Google tag (gtag.js) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-5WZ2GJ5KFF"></script>
+        <script>
           {`
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
-      page_path: window.location.pathname,
-    });
-        `}
-        </Script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-5WZ2GJ5KFF');
+          `}
+        </script>
       </Head>
       <body>
         <Main />
