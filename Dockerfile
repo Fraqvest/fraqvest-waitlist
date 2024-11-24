@@ -1,6 +1,14 @@
 # Use the official Node.js 20.12.1 image as the base image
 FROM node:20.12.1
 
+# Set build arguments and environment variables
+ARG NODE_ENV=production
+ENV NODE_ENV=${NODE_ENV}
+
+# Add NEXT_PUBLIC_SHEET_URL environment variable
+ARG NEXT_PUBLIC_SHEET_URL
+ENV NEXT_PUBLIC_SHEET_URL=${NEXT_PUBLIC_SHEET_URL}
+
 # Set the working directory inside the container
 WORKDIR /src
 
