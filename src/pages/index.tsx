@@ -21,7 +21,7 @@ export default function Home() {
           content="Fraqvest, fraqvest, Real Estate,  global rental properties, Accessible Future, btc, invest, blockchain, Investing, web3, ai, AI, dapp, dex, NFT, community, Blockchain"
         />
         <link rel="icon" href="favicon.ico" />
-        <!-- Google tag (gtag.js) -->
+        
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-5WZ2GJ5KFF"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
